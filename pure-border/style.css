@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outlined Triangle</title>
+    <style>
+      body {
+        background-color: #202020;
+      }
+      .triangle {
+        width: 12em;
+        height: 12em;
+        border: 1em solid #ffffff;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        left: 50%;
+        top: 50%;
+        border-right: none;
+        border-bottom: none;
+      }
+      .triangle:before {
+        position: absolute;
+        content: "";
+        border-top: 1em solid #ffffff;
+        width: calc(1.41 * (12em + 1em));
+        transform: rotate(-45deg);
+        left: -3.3em;
+        top: 5.35em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="triangle"></div>
+  </body>
+</html>
